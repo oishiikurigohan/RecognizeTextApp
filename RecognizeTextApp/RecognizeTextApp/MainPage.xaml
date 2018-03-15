@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RecognizeTextApp"
+             x:Class="RecognizeTextApp.MainPage">
+
+    <StackLayout Orientation="Vertical">
+        <Button x:Name="TakePictureButton" Clicked="TakePictureButton_Clicked" Text="Take from camera"/>
+        <ActivityIndicator x:Name="Indicator1" IsVisible="False" IsRunning="False" />
+        <Image x:Name="Image1" HeightRequest="240" />
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Language: "/>
+            <Label Text="{Binding Language}"/>
+        </StackLayout>
+
+        <ScrollView>
+            <StackLayout x:Name="DetectedText"/>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>
